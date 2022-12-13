@@ -1,7 +1,7 @@
+import { ApiClientFactory } from "lib";
 import { NextApiHandler, NextApiRequest, NextApiResponse } from "next";
-import ApiClientFactory from "../../lib/ApiClientFactory";
 
-const Proxy: NextApiHandler = async (req: NextApiRequest, res: NextApiResponse) => {
+const CatFacts: NextApiHandler = async (req: NextApiRequest, res: NextApiResponse) => {
     try {
       const apiClient = await ApiClientFactory.CreateBackendClient(req, res);
       if (apiClient == null || !apiClient.isAuthenticated) {
@@ -21,4 +21,4 @@ const Proxy: NextApiHandler = async (req: NextApiRequest, res: NextApiResponse) 
     }
   };
   
-  export default Proxy;
+  export default CatFacts;

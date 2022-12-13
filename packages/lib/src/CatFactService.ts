@@ -7,9 +7,9 @@ class CatFactService {
     this.axios = axios.create();
   }
 
-  getCatFact = async (): Promise<Array<any>> => {
+  getCatFact = async (): Promise<any> => {
     try {
-        const response = await this.axios.get<Array<any>>(`/api/catfacts`);
+        const response = await this.axios.get<any>(`/api/catfacts`);
 
         return response.data;
     }

@@ -1,6 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { Auth0 } from '../lib/Auth0';
-import CatFactService from '../lib/CatFactService';
+import { Auth0, CatFactService } from 'lib';
 
 export default function Home() {
   const catFactService = new CatFactService();
